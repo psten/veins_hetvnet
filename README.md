@@ -17,7 +17,7 @@ Integrates code from the SimuLTE `cars` simulation as well as `AlertSender` and 
 
 ## Setup ##
 
-To quickly set things up, download "Instant Veins 5.0-alpha2-i1 with SimuLTE".
+To quickly set things up, download "Instant Veins 5.0 with SimuLTE".
 Or, follow below instructions.
 
 First, make sure that you are using compatible program versions (see above) on a compatible platform (see above).
