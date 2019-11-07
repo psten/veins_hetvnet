@@ -35,7 +35,7 @@ import inet.networklayer.contract.INetworkLayer;
 import inet.networklayer.contract.IRoutingTable;
 import inet.transportlayer.tcp.TCP;
 import inet.transportlayer.udp.UDP;
-import lte.stack.phy.ILteNic;
+import lte.stack.ILteNic;
 
 module Car
 {
@@ -51,7 +51,7 @@ module Car
         int macNodeId = default(0);
         int macCellId = default(0);
         bool d2dCapable = default(false);
-        string nicType = d2dCapable ? "LteNicUeD2D" : "LteNicUe";
+        string nicType = default("LteNicUe");
         string networkLayerType = default("IPv4NetworkLayer");
         string routingTableType = default("IPv4RoutingTable");
         *.interfaceTableModule = default(absPath(".interfaceTable"));
@@ -86,7 +86,6 @@ module Car
         }
         lteNic: <nicType> like ILteNic {
             nodeType = nodeType;
-            d2dCapable = d2dCapable;
             @display("p=324.684,406.116");
         }
         networkLayer: <networkLayerType> like INetworkLayer {
