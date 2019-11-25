@@ -63,14 +63,14 @@ module Car
 
     submodules:
         mobility: <mobilityType> like IMobility {
-            @display("p=50,175;is=s");
+            @display("p=49.068,149.292;is=s");
         }
         interfaceTable: InterfaceTable {
-            @display("p=50,75;is=s");
+            @display("p=49.068,290.232;is=s");
         }
         routingTable: <routingTableType> like IRoutingTable if routingTableType != "" {
             parameters:
-                @display("p=50,125;is=s");
+                @display("p=49.068,225.504;is=s");
         }
         tcpApp[numTcpApps]: <> like ITCPApp {
             @display("p=175,50,row");
@@ -96,7 +96,7 @@ module Car
             @display("p=49.068,22.968");
         }
         configuratorWlan: HostAutoConfigurator {
-            @display("p=49.068,22.968");
+            @display("p=49.068,81.432");
         }
         wlan[1]: <default("Ieee80211Nic")> like IWirelessNic {
             parameters:
