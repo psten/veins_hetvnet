@@ -6,10 +6,10 @@ Integrates code from the SimuLTE `cars` simulation as well as `AlertSender` and 
 
 ## Supported program versions ##
 
-- Veins 5.0-alpha2 (see <http://veins.car2x.org/>)
+- Veins 5.0 (see <http://veins.car2x.org/>)
 - OMNeT++ 5.5.1 (see <https://omnetpp.org/>)
-- INET 3.6.5 (see <https://inet.omnetpp.org/>)
-- SimuLTE 1.0.1 with Veins integration (git commit fa994699) (see <http://simulte.com/>)
+- INET 3.6.6 (see <https://inet.omnetpp.org/>)
+- SimuLTE 1.1.0 with Veins integration (git commit 825ea27) (see <http://simulte.com/>)
 
 ## Supported platforms ##
 
@@ -17,7 +17,7 @@ Integrates code from the SimuLTE `cars` simulation as well as `AlertSender` and 
 
 ## Setup ##
 
-To quickly set things up, download "Instant Veins 5.0-alpha2-i1 with SimuLTE".
+To quickly set things up, download "Instant Veins 5.0 with SimuLTE".
 Or, follow below instructions.
 
 First, make sure that you are using compatible program versions (see above) on a compatible platform (see above).
