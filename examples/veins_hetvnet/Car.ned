@@ -41,7 +41,7 @@ module Car
 {
     parameters:
         @networkNode();
-        @display("bgb=400,518");
+        @display("bgb=500,500");
 
         string mobilityType = default("VeinsInetMobility");
         int numTcpApps = default(0);
@@ -63,44 +63,44 @@ module Car
 
     submodules:
         mobility: <mobilityType> like IMobility {
-            @display("p=49.068,149.292;is=s");
+            @display("p=75,160;is=s");
         }
         interfaceTable: InterfaceTable {
-            @display("p=49.068,290.232;is=s");
+            @display("p=75,270;is=s");
         }
         routingTable: <routingTableType> like IRoutingTable if routingTableType != "" {
             parameters:
-                @display("p=49.068,225.504;is=s");
+                @display("p=75,215;is=s");
         }
         tcpApp[numTcpApps]: <> like ITCPApp {
-            @display("p=175,50,row");
+            @display("p=250,50,row");
         }
         tcp: TCP if numTcpApps>0 {
-            @display("p=175,150");
+            @display("p=250,150");
         }
         udpApp[numUdpApps]: <> like IUDPApp {
-            @display("p=325,50,row");
+            @display("p=400,50,row");
         }
         udp: UDP if numUdpApps>0 {
-            @display("p=325,150");
+            @display("p=400,150");
         }
         lteNic: <nicType> like ILteNic {
             nodeType = nodeType;
-            @display("p=324.684,406.116");
+            @display("p=400,405");
         }
         networkLayer: <networkLayerType> like INetworkLayer {
             parameters:
-                @display("p=250,258");
+                @display("p=325,255");
         }
         configuratorLte: HostAutoConfigurator {
-            @display("p=49.068,22.968");
+            @display("p=75,50");
         }
         configuratorWlan: HostAutoConfigurator {
-            @display("p=49.068,81.432");
+            @display("p=75,105");
         }
         wlan[1]: <default("Ieee80211Nic")> like IWirelessNic {
             parameters:
-                @display("p=174.348,406.116,row,60;q=queue");
+                @display("p=250,405,row,60;q=queue");
         }
 
     connections allowunconnected:
